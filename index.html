@@ -27,13 +27,29 @@
       </button>
 
       <nav class="nav-menu" id="nav-menu" aria-hidden="true">
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link nav-cta">Get a Quote</a>
+        <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
+        <a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">Portfolio</a>
+        <a href="#about" class="nav-link" data-i18n="nav_about">About</a>
+        <a href="quote.html" class="nav-link nav-cta" data-i18n="nav_quote">Get a Quote</a>
       </nav>
     </div>
   </header>
+
+  <!-- ========== LANGUAGE BAR ========== -->
+  <div class="lang-bar">
+    <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">中文</button>
+  </div>
+
+  <!-- ========== LANGUAGE PICKER ========== -->
+  <div class="lang-picker-backdrop" id="lang-picker-backdrop" aria-hidden="true"></div>
+  <div class="lang-picker" id="lang-picker" role="dialog" aria-modal="true" aria-label="Choose your language">
+    <p class="lang-picker-title">Welcome — Choose Your Language</p>
+    <p class="lang-picker-subtitle">欢迎 — 请选择您的语言</p>
+    <div class="lang-picker-btns">
+      <button class="lang-picker-btn" data-lang="en">English</button>
+      <button class="lang-picker-btn" data-lang="zh">中文</button>
+    </div>
+  </div>
 
   <!-- ========== HERO ========== -->
   <section class="hero" id="home">
@@ -46,15 +62,15 @@
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow">GTA's Premier Renovation Studio</p>
-      <h1 class="hero-title">Your Vision.<br />Our Craft.</h1>
-      <p class="hero-subtitle">
+      <p class="hero-eyebrow" data-i18n="hero_eyebrow">GTA's Premier Renovation Studio</p>
+      <h1 class="hero-title" data-i18n="hero_title">Your Vision.<br />Our Craft.</h1>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">
         From sleek modern kitchens to spa-inspired bathrooms,<br class="hero-br" />
         we bring your dream space to life — beautifully.
       </p>
       <div class="hero-actions">
-        <a href="#contact" class="btn btn-gold">Request a Quote</a>
-        <a href="#portfolio" class="btn btn-outline">See Our Work</a>
+        <a href="quote.html" class="btn btn-gold" data-i18n="hero_cta_quote">Request a Quote</a>
+        <a href="#portfolio" class="btn btn-outline" data-i18n="hero_cta_work">See Our Work</a>
       </div>
     </div>
     <a href="#services" class="hero-scroll" aria-label="Scroll down">
@@ -68,9 +84,9 @@
   <section class="services" id="services">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">What We Do</p>
-        <h2 class="section-title">Spaces We Transform</h2>
-        <p class="section-subtitle">Every project is handled with precision, care, and decades of expertise.</p>
+        <p class="section-eyebrow" data-i18n="services_eyebrow">What We Do</p>
+        <h2 class="section-title" data-i18n="services_title">Spaces We Transform</h2>
+        <p class="section-subtitle" data-i18n="services_subtitle">Every project is handled with precision, care, and decades of expertise.</p>
       </div>
 
       <div class="services-grid">
@@ -82,9 +98,9 @@
             <div class="service-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
             </div>
-            <h3 class="service-title">Kitchen Renovations</h3>
-            <p class="service-desc">Custom cabinetry, premium countertops, and thoughtful layouts that make your kitchen the heart of your home.</p>
-            <a href="#contact" class="service-link">Get a Quote →</a>
+            <h3 class="service-title" data-i18n="svc_kitchen_title">Kitchen Renovations</h3>
+            <p class="service-desc" data-i18n="svc_kitchen_desc">Custom cabinetry, premium countertops, and thoughtful layouts that make your kitchen the heart of your home.</p>
+            <a href="quote.html" class="service-link" data-i18n="svc_cta">Get a Quote →</a>
           </div>
         </div>
 
@@ -96,9 +112,9 @@
             <div class="service-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 12h16M4 12a8 8 0 008 8M4 12a8 8 0 018-8"/></svg>
             </div>
-            <h3 class="service-title">Bathroom Renovations</h3>
-            <p class="service-desc">Elegant finishes, smart storage, and spa-like details that turn your bathroom into a daily retreat.</p>
-            <a href="#contact" class="service-link">Get a Quote →</a>
+            <h3 class="service-title" data-i18n="svc_bath_title">Bathroom Renovations</h3>
+            <p class="service-desc" data-i18n="svc_bath_desc">Elegant finishes, smart storage, and spa-like details that turn your bathroom into a daily retreat.</p>
+            <a href="quote.html" class="service-link" data-i18n="svc_cta">Get a Quote →</a>
           </div>
         </div>
 
@@ -110,9 +126,9 @@
             <div class="service-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-4 0v2M8 7V5a2 2 0 014 0"/></svg>
             </div>
-            <h3 class="service-title">Living Room Design</h3>
-            <p class="service-desc">Cohesive interiors with custom finishes and furnishings that reflect your personality and lifestyle.</p>
-            <a href="#contact" class="service-link">Get a Quote →</a>
+            <h3 class="service-title" data-i18n="svc_living_title">Living Room Design</h3>
+            <p class="service-desc" data-i18n="svc_living_desc">Cohesive interiors with custom finishes and furnishings that reflect your personality and lifestyle.</p>
+            <a href="quote.html" class="service-link" data-i18n="svc_cta">Get a Quote →</a>
           </div>
         </div>
       </div>
@@ -123,17 +139,17 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
       <div class="section-header">
-        <p class="section-eyebrow">Our Work</p>
-        <h2 class="section-title">Recent Projects</h2>
-        <p class="section-subtitle">Browse through a selection of our completed renovations.</p>
+        <p class="section-eyebrow" data-i18n="portfolio_eyebrow">Our Work</p>
+        <h2 class="section-title" data-i18n="portfolio_title">Recent Projects</h2>
+        <p class="section-subtitle" data-i18n="portfolio_subtitle">Browse through a selection of our completed renovations.</p>
       </div>
 
       <div class="portfolio-filters" role="group" aria-label="Filter projects">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="kitchen">Kitchen</button>
-        <button class="filter-btn" data-filter="bathroom">Bathroom</button>
-        <button class="filter-btn" data-filter="living">Living Room</button>
-        <button class="filter-btn" data-filter="other">More Spaces</button>
+        <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+        <button class="filter-btn" data-filter="kitchen" data-i18n="filter_kitchen">Kitchen</button>
+        <button class="filter-btn" data-filter="bathroom" data-i18n="filter_bath">Bathroom</button>
+        <button class="filter-btn" data-filter="living" data-i18n="filter_living">Living Room</button>
+        <button class="filter-btn" data-filter="other" data-i18n="filter_other">More Spaces</button>
       </div>
 
       <div class="portfolio-grid" id="portfolio-grid">
@@ -416,38 +432,38 @@
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20Wood%20Tone%20Vanity%20Marble%20Wall%20Gold%20Fixtures.JPG" alt="Premium bathroom finishes" class="about-img-accent" loading="lazy" />
         </div>
         <div class="about-content">
-          <p class="section-eyebrow">Our Story</p>
-          <h2 class="section-title">Built on Craftsmanship,<br />Driven by Detail</h2>
-          <p class="about-text">
+          <p class="section-eyebrow" data-i18n="about_eyebrow">Our Story</p>
+          <h2 class="section-title" data-i18n="about_title">Built on Craftsmanship,<br />Driven by Detail</h2>
+          <p class="about-text" data-i18n="about_p1">
             For over two decades, J&amp;P Kitchen &amp; Bath has been transforming homes across the Greater Toronto Area. Based in Scarborough, we combine old-world craftsmanship with modern design sensibilities to create spaces that are as functional as they are beautiful.
           </p>
-          <p class="about-text">
+          <p class="about-text" data-i18n="about_p2">
             Every project — from a single bathroom refresh to a full kitchen overhaul — receives our complete attention. We work closely with each client to understand their vision, their lifestyle, and their budget, then deliver results that exceed expectations.
           </p>
           <div class="about-values">
             <div class="value-item">
               <div class="value-icon">✦</div>
               <div>
-                <strong>Quality Materials</strong>
-                <p>We source only premium finishes and fixtures that stand the test of time.</p>
+                <strong data-i18n="val1_title">Quality Materials</strong>
+                <p data-i18n="val1_desc">We source only premium finishes and fixtures that stand the test of time.</p>
               </div>
             </div>
             <div class="value-item">
               <div class="value-icon">✦</div>
               <div>
-                <strong>On Time, On Budget</strong>
-                <p>We respect your home and your timeline — no surprises, no delays.</p>
+                <strong data-i18n="val2_title">On Time, On Budget</strong>
+                <p data-i18n="val2_desc">We respect your home and your timeline — no surprises, no delays.</p>
               </div>
             </div>
             <div class="value-item">
               <div class="value-icon">✦</div>
               <div>
-                <strong>Personal Service</strong>
-                <p>You work directly with us from first consultation to final walkthrough.</p>
+                <strong data-i18n="val3_title">Personal Service</strong>
+                <p data-i18n="val3_desc">You work directly with us from first consultation to final walkthrough.</p>
               </div>
             </div>
           </div>
-          <a href="#contact" class="btn btn-gold">Start Your Project</a>
+          <a href="quote.html" class="btn btn-gold" data-i18n="about_cta">Start Your Project</a>
         </div>
       </div>
     </div>
@@ -456,137 +472,79 @@
   <!-- ========== CONTACT ========== -->
   <section class="contact" id="contact">
     <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow">Get in Touch</p>
-        <h2 class="section-title">Request a Quote</h2>
-        <p class="section-subtitle">Tell us about your project and we'll get back to you within 24 hours.</p>
-      </div>
 
-      <div class="contact-grid">
-        <!-- Form -->
-        <form class="contact-form" id="contact-form" novalidate>
-          <div class="form-group">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required autocomplete="name" />
-            <span class="form-error" id="name-error"></span>
-          </div>
-
-          <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" class="form-input" placeholder="you@email.com" required autocomplete="email" />
-            <span class="form-error" id="email-error"></span>
-          </div>
-
-          <div class="form-group">
-            <label for="phone" class="form-label">Phone <span class="form-optional">(optional)</span></label>
-            <input type="tel" id="phone" name="phone" class="form-input" placeholder="(416) 555-0000" autocomplete="tel" />
-          </div>
-
-          <div class="form-group">
-            <label for="service" class="form-label">Service Interest</label>
-            <div class="form-select-wrap">
-              <select id="service" name="service" class="form-select" required>
-                <option value="" disabled selected>Select a service</option>
-                <option value="kitchen">Kitchen Renovation</option>
-                <option value="bathroom">Bathroom Renovation</option>
-                <option value="living">Living Room Design</option>
-                <option value="full">Full Home Renovation</option>
-                <option value="cabinetry">Custom Cabinetry &amp; Countertops</option>
-                <option value="other">Other / Not Sure Yet</option>
-              </select>
-              <svg class="select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </div>
-            <span class="form-error" id="service-error"></span>
-          </div>
-
-          <div class="form-group">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your project..." rows="5" required></textarea>
-            <span class="form-error" id="message-error"></span>
-          </div>
-
-          <button type="submit" class="btn btn-gold btn-full" id="submit-btn">
-            <span class="btn-text">Send Request</span>
-            <span class="btn-loading" aria-hidden="true">Sending…</span>
-          </button>
-
-          <div class="form-success" id="form-success" role="alert" aria-live="polite">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Thank you! We'll be in touch within 24 hours.
-          </div>
-        </form>
-
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <div class="contact-info-items">
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-              </div>
-              <div>
-                <strong>Visit Our Showroom</strong>
-                <p>3447 Kennedy Road<br />Scarborough, ON M1V 3S1</p>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path>
-                </svg>
-              </div>
-              <div>
-                <strong>Call Us</strong>
-                <p><a href="tel:+14167547773">(416) 754-7773</a></p>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-              </div>
-              <div>
-                <strong>Email Us</strong>
-                <p><a href="mailto:peter.qicheng1965@gmail.com">peter.qicheng1965@gmail.com</a></p>
-              </div>
-            </div>
-
-            <div class="contact-info-item">
-              <div class="contact-info-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-              </div>
-              <div>
-                <strong>Business Hours</strong>
-                <p>Mon–Fri: 9 a.m. – 6 p.m.<br />Sat–Sun: Closed</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-map">
-            <iframe
-              title="J&amp;P Kitchen &amp; Bath location"
-              src="https://maps.google.com/maps?q=3447+Kennedy+Road+Scarborough+ON+M1V+3S1&output=embed"
-              width="100%"
-              height="260"
-              style="border:0;"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
+      <!-- Primary CTA -->
+      <div class="contact-cta-block" data-aos>
+        <div class="contact-cta-text">
+          <p class="section-eyebrow" data-i18n="contact_eyebrow">Get in Touch</p>
+          <h2 class="section-title" data-i18n="contact_title">Ready to Transform Your Space?</h2>
+          <p class="section-subtitle" data-i18n="contact_subtitle">Tell us about your project and Peter will personally follow up within 24 hours.</p>
         </div>
+        <a href="quote.html" class="btn btn-gold contact-cta-btn" data-i18n="contact_cta_btn">Request a Quote</a>
       </div>
+
+      <!-- Contact cards -->
+      <div class="contact-cards">
+
+        <a href="https://maps.google.com/maps?q=3447+Kennedy+Road+Scarborough+ON+M1V+3S1" target="_blank" rel="noopener" class="contact-card" data-aos>
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <strong data-i18n="contact_showroom">Visit Our Showroom</strong>
+          <p>3447 Kennedy Road<br />Scarborough, ON M1V 3S1</p>
+        </a>
+
+        <a href="tel:+14167547773" class="contact-card" data-aos>
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.07 1.18 2 2 0 012.06 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path>
+            </svg>
+          </div>
+          <strong data-i18n="contact_call">Call Us</strong>
+          <p>(416) 754-7773</p>
+        </a>
+
+        <a href="mailto:peter.qicheng1965@gmail.com" class="contact-card" data-aos>
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <strong data-i18n="contact_email">Email Us</strong>
+          <p>peter.qicheng1965@gmail.com</p>
+        </a>
+
+        <div class="contact-card contact-card--static" data-aos>
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <strong data-i18n="contact_hours_title">Business Hours</strong>
+          <p data-i18n="contact_hours_body">Mon–Fri: 9 a.m. – 6 p.m.<br />Sat–Sun: Closed</p>
+        </div>
+
+      </div>
+
+      <!-- Map -->
+      <div class="contact-map" data-aos>
+        <iframe
+          title="J&amp;P Kitchen &amp; Bath location"
+          src="https://maps.google.com/maps?q=3447+Kennedy+Road+Scarborough+ON+M1V+3S1&output=embed"
+          width="100%"
+          height="320"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
     </div>
   </section>
 
@@ -611,10 +569,10 @@
         </div>
         <div class="footer-links">
           <h4 class="footer-heading">Services</h4>
-          <a href="#contact" class="footer-link">Kitchen Renovation</a>
-          <a href="#contact" class="footer-link">Bathroom Renovation</a>
-          <a href="#contact" class="footer-link">Living Room Design</a>
-          <a href="#contact" class="footer-link">Custom Cabinetry</a>
+          <a href="quote.html" class="footer-link">Kitchen Renovation</a>
+          <a href="quote.html" class="footer-link">Bathroom Renovation</a>
+          <a href="quote.html" class="footer-link">Living Room Design</a>
+          <a href="quote.html" class="footer-link">Custom Cabinetry</a>
         </div>
         <div class="footer-contact">
           <h4 class="footer-heading">Contact</h4>
@@ -630,5 +588,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="lang.js"></script>
 </body>
 </html>
