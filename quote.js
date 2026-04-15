@@ -46,32 +46,63 @@ function getServiceName(s) {
 /* ── Photo map: service id → array of { src, alt } ── */
 const PHOTO_MAP = {
   kitchen: [
-    { src: 'Kitchen/Kitchen%20-%20All%20White%20with%20Grey%20Island.JPG',           alt: 'All-white kitchen with grey island' },
-    { src: 'Kitchen/Kitchen%20-%20Wood%20Tone%20Gold%20Pendants%20Wide%20View.JPG',  alt: 'Wood tone kitchen with gold pendants' },
-    { src: 'Kitchen/Kitchen%20-%20Luxury%20Wood%20White%20Marble%20Backsplash.JPG',  alt: 'Luxury wood and white marble backsplash' },
-    { src: 'Kitchen/Kitchen%20-%20Open%20Concept%20Waterfront%20View.JPG',           alt: 'Open concept kitchen with waterfront view' },
-    { src: 'Kitchen/Kitchen%20-%20Wood%20Tone%20Waterfall%20Island.JPG',             alt: 'Wood tone waterfall island' },
-    { src: 'Kitchen/Kitchen%20-%20White%20and%20Charcoal%20Wide%20View.JPG',         alt: 'White and charcoal kitchen wide view' },
-    { src: 'Kitchen/Kitchen%20-%20Dark%20Island%20Under-Cabinet%20Lighting.JPG',     alt: 'Dark island with under-cabinet lighting' },
-    { src: 'Kitchen/Kitchen%20-%20Marble%20Island%20Open%20to%20Dining.JPG',         alt: 'Marble island open to dining' },
-    { src: 'Kitchen/Kitchen%20-%20Large%20Fluted%20Island.JPG',                      alt: 'Large fluted kitchen island' },
+    { src: 'Kitchen/Kitchen%20-%20All%20White%20with%20Grey%20Island.JPG',              alt: 'All-white kitchen with grey island' },
+    { src: 'Kitchen/Kitchen%20-%20Wood%20Tone%20Gold%20Pendants%20Wide%20View.JPG',     alt: 'Wood tone kitchen with gold pendants' },
+    { src: 'Kitchen/Kitchen%20-%20Luxury%20Wood%20White%20Marble%20Backsplash.JPG',     alt: 'Luxury wood and white marble backsplash' },
+    { src: 'Kitchen/Kitchen%20-%20Luxury%20Wood%20White%20Wide%20View.JPG',             alt: 'Luxury wood white wide view' },
+    { src: 'Kitchen/Kitchen%20-%20Open%20Concept%20Waterfront%20View.JPG',              alt: 'Open concept kitchen with waterfront view' },
+    { src: 'Kitchen/Kitchen%20-%20Wood%20Tone%20Waterfall%20Island.JPG',                alt: 'Wood tone waterfall island' },
+    { src: 'Kitchen/Kitchen%20-%20Wood%20Tone%20Large%20Island%20Wide%20View.JPG',      alt: 'Wood tone large island wide view' },
+    { src: 'Kitchen/Kitchen%20-%20Wood%20Tone%20Open%20Shelving%20Island.JPG',          alt: 'Wood tone open shelving island' },
+    { src: 'Kitchen/Kitchen%20-%20Wood%20Tone%20Island%20Close-Up.JPG',                 alt: 'Wood tone island close-up' },
+    { src: 'Kitchen/Kitchen%20-%20Wood%20Tone%20Fridge%20Wall.JPG',                     alt: 'Wood tone fridge wall' },
+    { src: 'Kitchen/Kitchen%20-%20Wood%20Tone%20Built-In%20Storage%20Cabinet.JPG',      alt: 'Wood tone built-in storage cabinet' },
+    { src: 'Kitchen/Kitchen%20-%20White%20and%20Charcoal%20Wide%20View.JPG',            alt: 'White and charcoal kitchen wide view' },
+    { src: 'Kitchen/Kitchen%20-%20White%20and%20Charcoal%20Marble%20Island.JPG',        alt: 'White and charcoal marble island' },
+    { src: 'Kitchen/Kitchen%20-%20White%20Gloss%20Dark%20Island%20Lighting.JPG',        alt: 'White gloss kitchen with dark island lighting' },
+    { src: 'Kitchen/Kitchen%20-%20White%20Quartz%20Island%20Wood%20Lowers.JPG',         alt: 'White quartz island with wood lowers' },
+    { src: 'Kitchen/Kitchen%20-%20White%20Upper%20Cabinets%20Fridge%20Surround.JPG',    alt: 'White upper cabinets with fridge surround' },
+    { src: 'Kitchen/Kitchen%20-%20White%20Wood%20Overhead%20View.JPG',                  alt: 'White wood kitchen overhead view' },
+    { src: 'Kitchen/Kitchen%20-%20White%20with%20Wine%20Rack%20and%20Ovens.JPG',        alt: 'White kitchen with wine rack and ovens' },
+    { src: 'Kitchen/Kitchen%20-%20Wine%20Rack%20Oven%20Tower%20Close-Up.JPG',           alt: 'Wine rack and oven tower close-up' },
+    { src: 'Kitchen/Kitchen%20-%20Dark%20Island%20Under-Cabinet%20Lighting.JPG',        alt: 'Dark island with under-cabinet lighting' },
+    { src: 'Kitchen/Kitchen%20-%20Marble%20Island%20Open%20to%20Dining.JPG',            alt: 'Marble island open to dining' },
+    { src: 'Kitchen/Kitchen%20-%20Large%20Fluted%20Island.JPG',                         alt: 'Large fluted kitchen island' },
+    { src: 'Kitchen/Kitchen%20-%20Black%20Framed%20Display%20Cabinet.JPG',              alt: 'Black framed display cabinet' },
+    { src: 'Kitchen/Kitchen%20-%20Wood%20Island%20City%20View%20at%20Night.JPG',        alt: 'Wood island with city view at night' },
+    { src: 'Kitchen/Kitchen%20-%20Wood%20Island%20with%20Microwave.JPG',                alt: 'Wood island with microwave' },
   ],
   bathroom: [
-    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Double%20Vanity%20Arched%20Backlit%20Mirrors.JPG', alt: 'Double vanity with arched backlit mirrors' },
+    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Double%20Vanity%20Arched%20Backlit%20Mirrors.JPG',    alt: 'Double vanity with arched backlit mirrors' },
     { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Wood%20Tone%20Vanity%20Marble%20Wall%20Gold%20Fixtures.JPG', alt: 'Wood tone vanity with marble wall and gold fixtures' },
-    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Full%20Room%20Wood%20White%20Vanity.JPG', alt: 'Full room wood and white vanity' },
-    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Double%20Vanity%20with%20Makeup%20Area.JPG', alt: 'Double vanity with makeup area' },
-    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20White%20Floating%20Vanity%20Herringbone%20Tile.JPG', alt: 'White floating vanity with herringbone tile' },
-    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Dark%20Floating%20Vanity%20White%20Top.JPG', alt: 'Dark floating vanity with white top' },
-    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Blue%20Shaker%20Powder%20Room%20Vanity.JPG', alt: 'Blue shaker powder room vanity' },
+    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Full%20Room%20Wood%20White%20Vanity.JPG',             alt: 'Full room wood and white vanity' },
+    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Double%20Vanity%20with%20Makeup%20Area.JPG',          alt: 'Double vanity with makeup area' },
+    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Double%20Vanity%20Green%20Tower%20Cabinet.JPG',       alt: 'Double vanity with green tower cabinet' },
+    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20White%20Floating%20Vanity%20Herringbone%20Tile.JPG',  alt: 'White floating vanity with herringbone tile' },
+    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20White%20Floating%20Vanity%20Vessel%20Sink.JPG',       alt: 'White floating vanity with vessel sink' },
+    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20White%20Shaker%20Vanity%20Base.JPG',                  alt: 'White shaker vanity base' },
+    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Dark%20Floating%20Vanity%20White%20Top.JPG',          alt: 'Dark floating vanity with white top' },
+    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Blue%20Shaker%20Powder%20Room%20Vanity.JPG',          alt: 'Blue shaker powder room vanity' },
+    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Light%20Wood%20Floating%20Vanity.JPG',                alt: 'Light wood floating vanity' },
+    { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Wood%20Vanity%20with%20Tower%20Cabinet.JPG',          alt: 'Wood vanity with tower cabinet' },
     { src: 'Bathroom%20%26%20Vanity/Bathroom%20-%20Wood%20White%20Floating%20Vanity%20Display%20Shelves.JPG', alt: 'Wood and white floating vanity with display shelves' },
   ],
   living: [
-    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Luxury%20Entertainment%20Wall%20Wide%20View.JPG', alt: 'Luxury entertainment wall wide view' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Luxury%20Entertainment%20Wall%20Wide%20View.JPG',     alt: 'Luxury entertainment wall wide view' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Luxury%20Entertainment%20Wall%20Close-Up.JPG',        alt: 'Luxury entertainment wall close-up' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Luxury%20Gold%20Accent%20Entertainment%20Wall.JPG',   alt: 'Luxury gold accent entertainment wall' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Luxury%20Wood%20Entertainment%20Wall.JPG',             alt: 'Luxury wood entertainment wall' },
     { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20All%20White%20Open%20Concept%20Entertainment%20Wall.JPG', alt: 'All-white open concept entertainment wall' },
-    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Floating%20TV%20Unit%20with%20Display%20Towers.JPG', alt: 'Floating TV unit with display towers' },
-    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Floor%20to%20Ceiling%20Bookshelves.JPG', alt: 'Floor to ceiling bookshelves' },
-    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Luxury%20Entertainment%20Wall%20Close-Up.JPG', alt: 'Luxury entertainment wall close-up' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20White%20Shaker%20Wall%20Unit%20Electric%20Fireplace.JPG', alt: 'White shaker wall unit with electric fireplace' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20White%20Wall%20Unit%20with%20TV.JPG',                  alt: 'White wall unit with TV' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Floating%20TV%20Unit%20with%20Display%20Towers.JPG',   alt: 'Floating TV unit with display towers' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Floor%20to%20Ceiling%20Bookshelves.JPG',               alt: 'Floor to ceiling bookshelves' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Navy%20Built-Ins%20Flanking%20Fireplace.JPG',          alt: 'Navy built-ins flanking fireplace' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Navy%20Wall%20Unit%20TV%20Space.JPG',                  alt: 'Navy wall unit TV space' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Wood%20Entertainment%20Wall%20In%20Progress.JPG',      alt: 'Wood entertainment wall in progress' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Wood%20Floating%20Cabinets%20Entertainment%20Wall.JPG', alt: 'Wood floating cabinets entertainment wall' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Wood%20Slat%20Entertainment%20Wall%20In%20Progress.JPG', alt: 'Wood slat entertainment wall in progress' },
+    { src: 'Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Wood%20Tone%20TV%20Unit%20Electric%20Fireplace.JPG',   alt: 'Wood tone TV unit with electric fireplace' },
   ],
   bedroom: [
     { src: 'Bedroom/Bedroom%20-%20White%20Wood%20Wall%20Unit%20with%20Wardrobe.JPG', alt: 'White wood wall unit with wardrobe' },
@@ -111,7 +142,8 @@ const PHOTO_MAP = {
 const state = {
   step: 1,
   service: null,
-  inspiredBy: [],  // photo alts (up to 3)
+  inspiredBy: [],      // photo alts (up to 3)
+  inspiredBySrc: [],   // photo srcs (up to 3)
   budget: null,
   timeline: null,
   contactMethod: null,
@@ -155,10 +187,11 @@ function renderPhotos() {
   const grid   = document.getElementById('photo-grid');
   const photos = PHOTO_MAP[state.service] || PHOTO_MAP.other;
 
-  state.inspiredBy = [];
+  state.inspiredBy    = [];
+  state.inspiredBySrc = [];
 
   grid.innerHTML = photos.map((p, i) => `
-    <div class="photo-card" data-index="${i}" data-alt="${p.alt}" role="checkbox" aria-checked="false" tabindex="0">
+    <div class="photo-card" data-index="${i}" data-alt="${p.alt}" data-src="${p.src}" role="checkbox" aria-checked="false" tabindex="0">
       <img src="${p.src}" alt="${p.alt}" loading="lazy" />
     </div>
   `).join('');
@@ -173,18 +206,21 @@ function renderPhotos() {
 
 function togglePhoto(card) {
   const alt = card.dataset.alt;
+  const src = card.dataset.src;
   const isSelected = card.classList.contains('selected');
   const grid = document.getElementById('photo-grid');
 
   if (isSelected) {
     card.classList.remove('selected');
     card.setAttribute('aria-checked', 'false');
-    state.inspiredBy = state.inspiredBy.filter(a => a !== alt);
+    state.inspiredBy    = state.inspiredBy.filter(a => a !== alt);
+    state.inspiredBySrc = state.inspiredBySrc.filter(s => s !== src);
   } else {
     if (state.inspiredBy.length >= 3) return;
     card.classList.add('selected');
     card.setAttribute('aria-checked', 'true');
     state.inspiredBy.push(alt);
+    state.inspiredBySrc.push(src);
   }
 
   // Dim unselected cards when limit reached
@@ -322,25 +358,39 @@ function buildSummary() {
   const t       = (typeof TRANSLATIONS !== 'undefined' && TRANSLATIONS[lang]) || {};
   const none    = lang === 'zh' ? '\u672a\u6307\u5b9a' : 'Not specified';
 
+  const inspiredHtml = state.inspiredBySrc.length
+    ? `<div class="confirm-inspired-grid">${state.inspiredBySrc.map((src, i) => `
+        <div class="confirm-inspired-img">
+          <img src="${src}" alt="${state.inspiredBy[i] || ''}" />
+        </div>`).join('')}</div>`
+    : `<span class="confirm-summary-value">${none}</span>`;
+
   const rows = [
-    { label: lang === 'zh' ? '\u670d\u52a1\u7c7b\u578b' : 'Service',      value: service ? getServiceName(service) : state.service },
-    { label: lang === 'zh' ? '\u7075\u611f\u56fe\u7247' : 'Inspired by',  value: state.inspiredBy.length ? state.inspiredBy.slice(0, 3).join(', ') : none },
-    { label: lang === 'zh' ? '\u9884\u7b97'              : 'Budget',       value: state.budget    || none },
-    { label: lang === 'zh' ? '\u8d77\u59cb\u65f6\u95f4'  : 'Timeline',     value: state.timeline  || none },
-    { label: lang === 'zh' ? '\u59d3\u540d'              : 'Name',         value: name },
-    { label: lang === 'zh' ? '\u7535\u5b50\u90ae\u4ef6'  : 'Email',        value: email },
-    { label: lang === 'zh' ? '\u7535\u8bdd'              : 'Phone',        value: phone },
-    { label: lang === 'zh' ? '\u8054\u7cfb\u65b9\u5f0f'  : 'Contact via',  value: state.contactMethod || none },
+    { label: lang === 'zh' ? '\u670d\u52a1\u7c7b\u578b' : 'Service',     value: service ? getServiceName(service) : state.service, plain: true },
+    { label: lang === 'zh' ? '\u9884\u7b97'              : 'Budget',      value: state.budget   || none, plain: true },
+    { label: lang === 'zh' ? '\u8d77\u59cb\u65f6\u95f4'  : 'Timeline',    value: state.timeline || none, plain: true },
+    { label: lang === 'zh' ? '\u59d3\u540d'              : 'Name',        value: name,  plain: true },
+    { label: lang === 'zh' ? '\u7535\u5b50\u90ae\u4ef6'  : 'Email',       value: email, plain: true },
+    { label: lang === 'zh' ? '\u7535\u8bdd'              : 'Phone',       value: phone, plain: true },
+    { label: lang === 'zh' ? '\u8054\u7cfb\u65b9\u5f0f'  : 'Contact via', value: state.contactMethod || none, plain: true },
   ];
 
-  const html = rows.map(r => `
+  const rowsHtml = rows.map(r => `
     <div class="confirm-summary-row">
       <span class="confirm-summary-label">${r.label}</span>
       <span class="confirm-summary-value">${r.value}</span>
     </div>
   `).join('');
 
-  document.getElementById('confirm-summary').innerHTML = html;
+  const inspiredLabel = lang === 'zh' ? '\u7075\u611f\u56fe\u7247' : 'Inspired by';
+
+  document.getElementById('confirm-summary').innerHTML = `
+    <div class="confirm-inspired-section">
+      <span class="confirm-summary-label">${inspiredLabel}</span>
+      ${inspiredHtml}
+    </div>
+    ${rowsHtml}
+  `;
 }
 
 /* ── EmailJS submit ── */
