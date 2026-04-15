@@ -172,6 +172,7 @@ const translations = {
     'footer-hours':           '周一至周五：上午9时 – 下午6时',
     'footer-copy':            '&copy; <span id="year"></span> J&amp;P 厨卫装修 版权所有。',
   },
+};
 
 let currentLang = localStorage.getItem('jp-lang') || 'en';
 
