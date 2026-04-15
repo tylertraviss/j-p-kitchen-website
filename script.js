@@ -173,92 +173,6 @@ const translations = {
     'footer-copy':            '&copy; <span id="year"></span> J&amp;P 厨卫装修 版权所有。',
   },
 
-  // ── Cantonese (Traditional Chinese) ───────────────────────────────────────
-  yue: {
-    'nav-services':      '服務',
-    'nav-portfolio':     '作品集',
-    'nav-about':         '關於我哋',
-    'nav-quote':         '取得報價',
-
-    'hero-eyebrow':      'GTA 頂尖家居裝修工作室',
-    'hero-title':        '您嘅願景。<br />我哋嘅手藝。',
-    'hero-subtitle':     '由現代簡約廚房到水療風格浴室，<br class="hero-br" />我哋將您嘅夢想空間變為現實——美輪美奐。',
-    'hero-btn-quote':    '申請報價',
-    'hero-btn-work':     '睇睇我哋嘅作品',
-
-    'services-eyebrow':  '我哋嘅服務',
-    'services-title':    '我哋改造嘅空間',
-    'services-subtitle': '每個項目都以精準、用心同數十年嘅專業經驗完成。',
-    'service-kitchen-title': '廚房翻新',
-    'service-kitchen-desc':  '訂製廚櫃、高端枱面同精心佈局，令廚房成為家嘅核心。',
-    'service-bath-title':    '浴室翻新',
-    'service-bath-desc':     '精緻飾面、智能收納同水療細節，令浴室成為每日享受嘅空間。',
-    'service-living-title':  '客廳設計',
-    'service-living-desc':   '和諧嘅室內設計，訂製飾面同傢俬，彰顯您嘅個性同生活方式。',
-    'service-link':          '取得報價 →',
-
-    'portfolio-eyebrow':  '我哋嘅作品',
-    'portfolio-title':    '近期項目',
-    'portfolio-subtitle': '瀏覽我哋部分已完成嘅裝修案例。',
-    'filter-all':         '全部',
-    'filter-kitchen':     '廚房',
-    'filter-bathroom':    '浴室',
-    'filter-living':      '客廳',
-    'filter-other':       '更多空間',
-    'tag-bedroom':        '睡房',
-    'tag-laundry':        '洗衣房',
-    'tag-mudroom':        '玄關',
-    'tag-office':         '家居辦公室',
-    'tag-commercial':     '商業空間',
-
-    'about-eyebrow': '我哋嘅故事',
-    'about-title':   '以手藝為根本，<br />以細節為驅動',
-    'about-p1':      '二十幾年來，J&amp;P 廚衛裝修一直喺大多倫多地區為各個家庭打造夢想空間。我哋以士嘉堡為根基，將傳統工藝同現代設計理念融為一體，打造出既實用又美觀嘅空間。',
-    'about-p2':      '每一個項目——無論係單間浴室翻新定係整體廚房改造——都係我哋全心全力去做。我哋同每位客戶緊密合作，深入了解佢哋嘅願景、生活方式同預算，然後超越期望地交付成果。',
-    'value1-title':  '優質材料',
-    'value1-desc':   '我哋只選用能經受時間考驗嘅高端飾面同配件。',
-    'value2-title':  '準時，唔超預算',
-    'value2-desc':   '我哋尊重您嘅家同時間——冇意外，冇延誤。',
-    'value3-title':  '貼心服務',
-    'value3-desc':   '由首次諮詢到竣工驗收，您將全程同我哋直接合作。',
-    'about-btn':     '開展您嘅項目',
-
-    'contact-eyebrow':  '聯絡我哋',
-    'contact-title':    '申請報價',
-    'contact-subtitle': '話畀我哋知您嘅項目詳情，我哋會喺24小時內聯絡您。',
-    'form-name':        '姓名',
-    'form-name-ph':     '您嘅姓名',
-    'form-email':       '電郵',
-    'form-phone':       '電話',
-    'form-optional':    '（可選）',
-    'form-service':     '服務類型',
-    'form-select-ph':   '請選擇服務',
-    'opt-kitchen':      '廚房翻新',
-    'opt-bathroom':     '浴室翻新',
-    'opt-living':       '客廳設計',
-    'opt-full':         '全屋翻新',
-    'opt-cabinetry':    '訂製廚櫃同枱面',
-    'opt-other':        '其他 / 暫未確定',
-    'form-message':     '留言',
-    'form-message-ph':  '請話畀我哋知您嘅項目詳情…',
-    'form-submit':      '發送請求',
-    'form-sending':     '發送中…',
-    'form-success-msg': '多謝您！我哋會喺24小時內聯絡您。',
-    'info-showroom':    '參觀我哋嘅展廳',
-    'info-call':        '致電我哋',
-    'info-email':       '發送電郵',
-    'info-hours':       '營業時間',
-    'info-hours-val':   '星期一至五：上午9時 – 下午6時<br />星期六、日：休息',
-
-    'footer-tagline':         '您嘅願景。我哋嘅手藝。',
-    'footer-nav':             '導航',
-    'footer-contact-link':    '聯絡我哋',
-    'footer-contact-heading': '聯絡方式',
-    'footer-hours':           '星期一至五：上午9時 – 下午6時',
-    'footer-copy':            '&copy; <span id="year"></span> J&amp;P 廚衛裝修 版權所有。',
-  },
-};
-
 let currentLang = localStorage.getItem('jp-lang') || 'en';
 
 function setLanguage(lang) {
@@ -267,7 +181,7 @@ function setLanguage(lang) {
   localStorage.setItem('jp-lang', lang);
 
   // Update html lang attribute
-  const langMap = { en: 'en', zh: 'zh-Hans', yue: 'zh-Hant' };
+  const langMap = { en: 'en', zh: 'zh-Hans' };
   document.documentElement.lang = langMap[lang];
 
   // Translate text content
@@ -540,5 +454,33 @@ document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
 });
 
-// Apply saved or default language on load
-setLanguage(currentLang);
+/* ===========================
+   LANGUAGE PICKER MODAL
+=========================== */
+const pickerBackdrop = document.getElementById('lang-picker-backdrop');
+const picker         = document.getElementById('lang-picker');
+
+function showPicker() {
+  document.body.style.overflow = 'hidden';
+}
+
+function hidePicker() {
+  picker.classList.add('hidden');
+  pickerBackdrop.classList.add('hidden');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.lang-picker-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    setLanguage(btn.dataset.lang);
+    hidePicker();
+  });
+});
+
+// Show picker only if no preference has been saved
+if (localStorage.getItem('jp-lang')) {
+  hidePicker();
+  setLanguage(currentLang);
+} else {
+  showPicker();
+}

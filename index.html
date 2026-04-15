@@ -12,6 +12,25 @@
 </head>
 <body>
 
+  <!-- ========== LANGUAGE PICKER ========== -->
+  <div class="lang-picker-backdrop" id="lang-picker-backdrop" aria-hidden="true"></div>
+  <div class="lang-picker" id="lang-picker" role="dialog" aria-modal="true" aria-label="Choose your language">
+    <div class="lang-picker-logo">
+      <span class="logo-jp">J&amp;P</span>
+      <span class="logo-text">Kitchen &amp; Bath</span>
+    </div>
+    <p class="lang-picker-prompt">Please select your language<br /><span class="lang-picker-prompt-zh">请选择您的语言</span></p>
+    <div class="lang-picker-btns">
+      <button class="lang-picker-btn" data-lang="en">
+        <span class="lang-picker-label">English</span>
+      </button>
+      <button class="lang-picker-btn" data-lang="zh">
+        <span class="lang-picker-label">中文</span>
+        <span class="lang-picker-sub">简体中文</span>
+      </button>
+    </div>
+  </div>
+
   <!-- ========== NAVIGATION ========== -->
   <header class="nav-header" id="nav-header">
     <div class="nav-container">
@@ -25,7 +44,6 @@
         <div class="lang-switcher" role="group" aria-label="Language">
           <button class="lang-btn active" data-lang="en">EN</button>
           <button class="lang-btn" data-lang="zh">中文</button>
-          <button class="lang-btn" data-lang="yue">粵語</button>
         </div>
 
         <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
@@ -44,7 +62,6 @@
         <div class="lang-switcher lang-switcher-mobile" role="group" aria-label="Language">
           <button class="lang-btn active" data-lang="en">EN</button>
           <button class="lang-btn" data-lang="zh">中文</button>
-          <button class="lang-btn" data-lang="yue">粵語</button>
         </div>
       </nav>
     </div>
