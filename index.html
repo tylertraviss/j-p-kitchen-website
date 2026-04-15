@@ -12,6 +12,25 @@
 </head>
 <body>
 
+  <!-- ========== LANGUAGE PICKER ========== -->
+  <div class="lang-picker-backdrop" id="lang-picker-backdrop" aria-hidden="true"></div>
+  <div class="lang-picker" id="lang-picker" role="dialog" aria-modal="true" aria-label="Choose your language">
+    <div class="lang-picker-logo">
+      <span class="logo-jp">J&amp;P</span>
+      <span class="logo-text">Kitchen &amp; Bath</span>
+    </div>
+    <p class="lang-picker-prompt">Please select your language<br /><span class="lang-picker-prompt-zh">请选择您的语言</span></p>
+    <div class="lang-picker-btns">
+      <button class="lang-picker-btn" data-lang="en">
+        <span class="lang-picker-label">English</span>
+      </button>
+      <button class="lang-picker-btn" data-lang="zh">
+        <span class="lang-picker-label">中文</span>
+        <span class="lang-picker-sub">简体中文</span>
+      </button>
+    </div>
+  </div>
+
   <!-- ========== NAVIGATION ========== -->
   <header class="nav-header" id="nav-header">
     <div class="nav-container">
@@ -20,11 +39,19 @@
         <span class="logo-text">Kitchen &amp; Bath</span>
       </a>
 
-      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+      <div class="nav-right">
+        <!-- Language Switcher -->
+        <div class="lang-switcher" role="group" aria-label="Language">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="zh">中文</button>
+        </div>
+
+        <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
 
       <nav class="nav-menu" id="nav-menu" aria-hidden="true">
         <a href="#services" class="nav-link" data-i18n="nav_services">Services</a>
@@ -157,241 +184,241 @@
         <!-- Kitchen -->
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Open%20Concept%20Waterfront%20View.JPG" alt="Open concept waterfront kitchen" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Open Concept Waterfront View</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Open Concept Waterfront View</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Luxury%20Wood%20White%20Wide%20View.JPG" alt="Luxury wood white kitchen" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Luxury Wood &amp; White</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Luxury Wood &amp; White</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Luxury%20Wood%20White%20Marble%20Backsplash.JPG" alt="Marble backsplash kitchen" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Marble Backsplash Kitchen</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Marble Backsplash Kitchen</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Wood%20Tone%20Gold%20Pendants%20Wide%20View.JPG" alt="Wood tone kitchen with gold pendants" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Wood Tone &amp; Gold Pendants</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Wood Tone &amp; Gold Pendants</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Wood%20Tone%20Large%20Island%20Wide%20View.JPG" alt="Large wood island kitchen" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Large Island Wide View</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Large Island Wide View</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Wood%20Tone%20Waterfall%20Island.JPG" alt="Waterfall island kitchen" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Waterfall Island</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Waterfall Island</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20White%20and%20Charcoal%20Marble%20Island.JPG" alt="White and charcoal marble island" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">White &amp; Charcoal Marble Island</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">White &amp; Charcoal Marble Island</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20White%20and%20Charcoal%20Wide%20View.JPG" alt="White and charcoal kitchen wide view" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">White &amp; Charcoal Wide View</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">White &amp; Charcoal Wide View</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Marble%20Island%20Open%20to%20Dining.JPG" alt="Marble island open to dining" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Marble Island Open to Dining</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Marble Island Open to Dining</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Large%20Fluted%20Island.JPG" alt="Large fluted island kitchen" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Large Fluted Island</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Large Fluted Island</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20All%20White%20with%20Grey%20Island.JPG" alt="All white kitchen with grey island" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">All White with Grey Island</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">All White with Grey Island</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20White%20Gloss%20Dark%20Island%20Lighting.JPG" alt="White gloss dark island" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">White Gloss &amp; Dark Island</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">White Gloss &amp; Dark Island</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Dark%20Island%20Under-Cabinet%20Lighting.JPG" alt="Dark island under-cabinet lighting" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Dark Island Under-Cabinet Lighting</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Dark Island Under-Cabinet Lighting</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Wood%20Island%20City%20View%20at%20Night.JPG" alt="Wood island city view at night" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">City View at Night</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">City View at Night</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20White%20with%20Wine%20Rack%20and%20Ovens.JPG" alt="Kitchen with wine rack and ovens" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Wine Rack &amp; Oven Tower</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Wine Rack &amp; Oven Tower</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20White%20Quartz%20Island%20Wood%20Lowers.JPG" alt="White quartz island wood lowers" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">White Quartz &amp; Wood Lowers</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">White Quartz &amp; Wood Lowers</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Black%20Framed%20Display%20Cabinet.JPG" alt="Black framed display cabinet" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Black Framed Display Cabinet</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Black Framed Display Cabinet</p></div>
         </div>
         <div class="portfolio-item" data-category="kitchen">
           <img src="Kitchen/Kitchen%20-%20Wood%20Tone%20Open%20Shelving%20Island.JPG" alt="Wood tone open shelving island" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Kitchen</span><p class="portfolio-caption">Open Shelving Island</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-kitchen">Kitchen</span><p class="portfolio-caption">Open Shelving Island</p></div>
         </div>
 
         <!-- Bathroom -->
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20Double%20Vanity%20Arched%20Backlit%20Mirrors.JPG" alt="Double vanity arched mirrors" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Double Vanity &amp; Arched Mirrors</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Double Vanity &amp; Arched Mirrors</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20Wood%20Tone%20Vanity%20Marble%20Wall%20Gold%20Fixtures.JPG" alt="Wood tone vanity marble wall" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Marble Wall &amp; Gold Fixtures</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Marble Wall &amp; Gold Fixtures</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20Double%20Vanity%20Green%20Tower%20Cabinet.JPG" alt="Double vanity green tower cabinet" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Double Vanity &amp; Tower Cabinet</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Double Vanity &amp; Tower Cabinet</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20Double%20Vanity%20with%20Makeup%20Area.JPG" alt="Double vanity with makeup area" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Vanity with Makeup Area</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Vanity with Makeup Area</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20Full%20Room%20Wood%20White%20Vanity.JPG" alt="Full room wood white vanity" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Full Room Wood &amp; White</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Full Room Wood &amp; White</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20White%20Floating%20Vanity%20Herringbone%20Tile.JPG" alt="White floating vanity herringbone tile" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Floating Vanity &amp; Herringbone Tile</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Floating Vanity &amp; Herringbone Tile</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20Dark%20Floating%20Vanity%20White%20Top.JPG" alt="Dark floating vanity white top" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Dark Floating Vanity</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Dark Floating Vanity</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20Light%20Wood%20Floating%20Vanity.JPG" alt="Light wood floating vanity" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Light Wood Floating Vanity</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Light Wood Floating Vanity</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20Blue%20Shaker%20Powder%20Room%20Vanity.JPG" alt="Blue shaker powder room" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Blue Shaker Powder Room</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Blue Shaker Powder Room</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20Wood%20Vanity%20with%20Tower%20Cabinet.JPG" alt="Wood vanity with tower cabinet" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Wood Vanity &amp; Tower Cabinet</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Wood Vanity &amp; Tower Cabinet</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20White%20Floating%20Vanity%20Vessel%20Sink.JPG" alt="White floating vanity vessel sink" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Vessel Sink Vanity</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Vessel Sink Vanity</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20Wood%20White%20Floating%20Vanity%20Display%20Shelves.JPG" alt="Wood white floating vanity display shelves" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">Floating Vanity &amp; Display Shelves</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">Floating Vanity &amp; Display Shelves</p></div>
         </div>
         <div class="portfolio-item" data-category="bathroom">
           <img src="Bathroom%20%26%20Vanity/Bathroom%20-%20White%20Shaker%20Vanity%20Base.JPG" alt="White shaker vanity base" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bathroom</span><p class="portfolio-caption">White Shaker Vanity</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-bathroom">Bathroom</span><p class="portfolio-caption">White Shaker Vanity</p></div>
         </div>
 
         <!-- Living Room -->
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Luxury%20Entertainment%20Wall%20Wide%20View.JPG" alt="Luxury entertainment wall wide view" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">Luxury Entertainment Wall</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">Luxury Entertainment Wall</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Luxury%20Gold%20Accent%20Entertainment%20Wall.JPG" alt="Gold accent entertainment wall" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">Gold Accent Entertainment Wall</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">Gold Accent Entertainment Wall</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Luxury%20Wood%20Entertainment%20Wall.JPG" alt="Luxury wood entertainment wall" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">Luxury Wood Entertainment Wall</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">Luxury Wood Entertainment Wall</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Luxury%20Entertainment%20Wall%20Close-Up.JPG" alt="Luxury entertainment wall close-up" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">Entertainment Wall Close-Up</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">Entertainment Wall Close-Up</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20All%20White%20Open%20Concept%20Entertainment%20Wall.JPG" alt="All white open concept entertainment wall" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">All White Open Concept</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">All White Open Concept</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Navy%20Built-Ins%20Flanking%20Fireplace.JPG" alt="Navy built-ins flanking fireplace" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">Navy Built-Ins &amp; Fireplace</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">Navy Built-Ins &amp; Fireplace</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20White%20Shaker%20Wall%20Unit%20Electric%20Fireplace.JPG" alt="White shaker wall unit electric fireplace" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">Shaker Wall Unit &amp; Fireplace</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">Shaker Wall Unit &amp; Fireplace</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Wood%20Tone%20TV%20Unit%20Electric%20Fireplace.JPG" alt="Wood tone TV unit electric fireplace" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">Wood TV Unit &amp; Fireplace</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">Wood TV Unit &amp; Fireplace</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Floor%20to%20Ceiling%20Bookshelves.JPG" alt="Floor to ceiling bookshelves" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">Floor-to-Ceiling Bookshelves</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">Floor-to-Ceiling Bookshelves</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Floating%20TV%20Unit%20with%20Display%20Towers.JPG" alt="Floating TV unit with display towers" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">Floating TV Unit &amp; Display Towers</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">Floating TV Unit &amp; Display Towers</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Wood%20Floating%20Cabinets%20Entertainment%20Wall.JPG" alt="Wood floating cabinets entertainment wall" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">Wood Floating Cabinets</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">Wood Floating Cabinets</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20Navy%20Wall%20Unit%20TV%20Space.JPG" alt="Navy wall unit TV space" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">Navy Wall Unit</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">Navy Wall Unit</p></div>
         </div>
         <div class="portfolio-item" data-category="living">
           <img src="Living%20Room%20%26%20Entertainment/Living%20Room%20-%20White%20Wall%20Unit%20with%20TV.JPG" alt="White wall unit with TV" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Living Room</span><p class="portfolio-caption">White Wall Unit</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="filter-living">Living Room</span><p class="portfolio-caption">White Wall Unit</p></div>
         </div>
 
         <!-- More Spaces -->
         <div class="portfolio-item" data-category="other">
           <img src="Bedroom/Bedroom%20-%20White%20Wood%20Wall%20Unit%20with%20Wardrobe.JPG" alt="White wood bedroom wall unit" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bedroom</span><p class="portfolio-caption">White Wood Wall Unit &amp; Wardrobe</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-bedroom">Bedroom</span><p class="portfolio-caption">White Wood Wall Unit &amp; Wardrobe</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Bedroom/Bedroom%20-%20Dark%20Grey%20Wardrobe.JPG" alt="Dark grey bedroom wardrobe" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bedroom</span><p class="portfolio-caption">Dark Grey Wardrobe</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-bedroom">Bedroom</span><p class="portfolio-caption">Dark Grey Wardrobe</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Bedroom/Bedroom%20-%20Tall%20Grey%20Storage%20Cabinets.JPG" alt="Tall grey storage cabinets" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Bedroom</span><p class="portfolio-caption">Tall Grey Storage Cabinets</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-bedroom">Bedroom</span><p class="portfolio-caption">Tall Grey Storage Cabinets</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Laundry%20Room/Laundry%20Room%20-%20Sage%20Green%20Shaker%20Cabinets.JPG" alt="Sage green laundry room" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Laundry Room</span><p class="portfolio-caption">Sage Green Shaker Cabinets</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-laundry">Laundry Room</span><p class="portfolio-caption">Sage Green Shaker Cabinets</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Laundry%20Room/Laundry%20Room%20-%20Teal%20Cabinets%20Stacked%20Washer%20Dryer.JPG" alt="Teal laundry room cabinets" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Laundry Room</span><p class="portfolio-caption">Teal Cabinets &amp; Stacked Units</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-laundry">Laundry Room</span><p class="portfolio-caption">Teal Cabinets &amp; Stacked Units</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Laundry%20Room/Laundry%20Room%20-%20Dark%20Wood%20Tone%20with%20Sink.JPG" alt="Dark wood tone laundry room" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Laundry Room</span><p class="portfolio-caption">Dark Wood Tone with Sink</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-laundry">Laundry Room</span><p class="portfolio-caption">Dark Wood Tone with Sink</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Laundry%20Room/Laundry%20Room%20-%20White%20and%20Wood%20Tone%20Cabinets.JPG" alt="White and wood tone laundry room" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Laundry Room</span><p class="portfolio-caption">White &amp; Wood Tone Laundry</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-laundry">Laundry Room</span><p class="portfolio-caption">White &amp; Wood Tone Laundry</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Mudroom%20%26%20Entryway/Mudroom%20-%20Sage%20Green%20Shaker%20Wide%20View.JPG" alt="Sage green mudroom wide view" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Mudroom</span><p class="portfolio-caption">Sage Green Shaker Mudroom</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-mudroom">Mudroom</span><p class="portfolio-caption">Sage Green Shaker Mudroom</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Mudroom%20%26%20Entryway/Mudroom%20-%20Sage%20Green%20Shaker%20with%20Bench.JPG" alt="Sage green mudroom with bench" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Mudroom</span><p class="portfolio-caption">Mudroom with Bench</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-mudroom">Mudroom</span><p class="portfolio-caption">Mudroom with Bench</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Mudroom%20%26%20Entryway/Mudroom%20-%20White%20Shaker%20with%20Bench%20and%20Hooks.JPG" alt="White shaker mudroom with bench" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Mudroom</span><p class="portfolio-caption">White Shaker &amp; Hooks</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-mudroom">Mudroom</span><p class="portfolio-caption">White Shaker &amp; Hooks</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Home%20Office/Home%20Office%20-%20Dark%20Built-In%20Desk%20and%20Wardrobe.JPG" alt="Dark home office built-in desk" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Home Office</span><p class="portfolio-caption">Built-In Desk &amp; Wardrobe</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-office">Home Office</span><p class="portfolio-caption">Built-In Desk &amp; Wardrobe</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Home%20Office/Home%20Office%20-%20White%20Bookcase%20with%20LED%20Lighting.JPG" alt="White bookcase with LED lighting" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Home Office</span><p class="portfolio-caption">Bookcase with LED Lighting</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-office">Home Office</span><p class="portfolio-caption">Bookcase with LED Lighting</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Home%20Office/Home%20Office%20-%20White%20Shaker%20Built-In%20Shelving.JPG" alt="White shaker built-in shelving" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Home Office</span><p class="portfolio-caption">Shaker Built-In Shelving</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-office">Home Office</span><p class="portfolio-caption">Shaker Built-In Shelving</p></div>
         </div>
         <div class="portfolio-item" data-category="other">
           <img src="Commercial/Commercial%20-%20White%20Grey%20Reception%20Desk.JPG" alt="Commercial reception desk" loading="lazy" />
-          <div class="portfolio-overlay"><span class="portfolio-tag">Commercial</span><p class="portfolio-caption">Reception Desk</p></div>
+          <div class="portfolio-overlay"><span class="portfolio-tag" data-i18n="tag-commercial">Commercial</span><p class="portfolio-caption">Reception Desk</p></div>
         </div>
 
       </div>
@@ -557,15 +584,15 @@
             <span class="logo-jp">J&amp;P</span>
             <span class="logo-text">Kitchen &amp; Bath</span>
           </a>
-          <p class="footer-tagline">Your Vision. Our Craft.</p>
+          <p class="footer-tagline" data-i18n="footer-tagline">Your Vision. Our Craft.</p>
           <p class="footer-address">3447 Kennedy Road, Scarborough, ON M1V 3S1</p>
         </div>
         <div class="footer-links">
-          <h4 class="footer-heading">Navigate</h4>
-          <a href="#services" class="footer-link">Services</a>
-          <a href="#portfolio" class="footer-link">Portfolio</a>
-          <a href="#about" class="footer-link">About</a>
-          <a href="#contact" class="footer-link">Contact</a>
+          <h4 class="footer-heading" data-i18n="footer-nav">Navigate</h4>
+          <a href="#services" class="footer-link" data-i18n="nav-services">Services</a>
+          <a href="#portfolio" class="footer-link" data-i18n="nav-portfolio">Portfolio</a>
+          <a href="#about" class="footer-link" data-i18n="nav-about">About</a>
+          <a href="#contact" class="footer-link" data-i18n="footer-contact-link">Contact</a>
         </div>
         <div class="footer-links">
           <h4 class="footer-heading">Services</h4>
@@ -575,14 +602,14 @@
           <a href="quote.html" class="footer-link">Custom Cabinetry</a>
         </div>
         <div class="footer-contact">
-          <h4 class="footer-heading">Contact</h4>
+          <h4 class="footer-heading" data-i18n="footer-contact-heading">Contact</h4>
           <a href="tel:+14167547773" class="footer-link">(416) 754-7773</a>
           <a href="mailto:peter.qicheng1965@gmail.com" class="footer-link">peter.qicheng1965@gmail.com</a>
-          <p class="footer-hours">Mon–Fri: 9 a.m. – 6 p.m.</p>
+          <p class="footer-hours" data-i18n="footer-hours">Mon–Fri: 9 a.m. – 6 p.m.</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; <span id="year"></span> J&amp;P Kitchen &amp; Bath. All rights reserved.</p>
+        <p data-i18n="footer-copy">&copy; <span id="year"></span> J&amp;P Kitchen &amp; Bath. All rights reserved.</p>
       </div>
     </div>
   </footer>
