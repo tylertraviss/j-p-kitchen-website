@@ -371,77 +371,8 @@ if ('IntersectionObserver' in window) {
 }
 
 /* ===========================
-   CONTACT FORM
+   CONTACT FORM — removed; contact section now links to quote.html
 =========================== */
-const form       = document.getElementById('contact-form');
-const submitBtn  = document.getElementById('submit-btn');
-const formSuccess = document.getElementById('form-success');
-
-function validateField(id, errorId, check, msg) {
-  const el  = document.getElementById(id);
-  const err = document.getElementById(errorId);
-  if (!check(el.value)) {
-    el.classList.add('error');
-    err.textContent = msg;
-    return false;
-  }
-  el.classList.remove('error');
-  err.textContent = '';
-  return true;
-}
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const nameOk = validateField('name', 'name-error',
-    v => v.trim().length >= 2,
-    'Please enter your name.');
-
-  const emailOk = validateField('email', 'email-error',
-    v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()),
-    'Please enter a valid email address.');
-
-  const serviceOk = validateField('service', 'service-error',
-    v => v !== '',
-    'Please select a service.');
-
-  const msgOk = validateField('message', 'message-error',
-    v => v.trim().length >= 10,
-    'Please tell us a bit more about your project.');
-
-  if (!nameOk || !emailOk || !serviceOk || !msgOk) return;
-
-  // Simulate async send
-  submitBtn.classList.add('loading');
-  submitBtn.disabled = true;
-
-  await new Promise(res => setTimeout(res, 1400));
-
-  submitBtn.classList.remove('loading');
-  form.reset();
-  formSuccess.classList.add('visible');
-
-  setTimeout(() => {
-    formSuccess.classList.remove('visible');
-    submitBtn.disabled = false;
-  }, 6000);
-});
-
-// Inline validation on blur
-['name', 'email', 'service', 'message'].forEach(id => {
-  const el = document.getElementById(id);
-  if (!el) return;
-  el.addEventListener('blur', () => {
-    if (el.classList.contains('error')) el.dispatchEvent(new Event('input'));
-  });
-  el.addEventListener('input', () => {
-    if (el.value.trim()) {
-      el.classList.remove('error');
-      const err = document.getElementById(id + '-error');
-      if (err) err.textContent = '';
-    }
-  });
-});
 
 /* ===========================
    FOOTER YEAR
