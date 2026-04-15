@@ -230,18 +230,20 @@ h1, h2, h3, h4 {
 
 .nav-link {
   font-size: 0.875rem;
-  font-weight: 500;
-  color: var(--text-muted);
-  padding: 8px 14px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 8px 16px;
   border-radius: var(--radius);
-  transition: color var(--transition);
+  transition: color var(--transition), background var(--transition);
   min-height: 44px;
   display: flex;
   align-items: center;
+  letter-spacing: 0.03em;
 }
 
 .nav-link:hover {
-  color: var(--text);
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.08);
 }
 
 .nav-cta {
@@ -1135,11 +1137,12 @@ h1, h2, h3, h4 {
   }
 
   .nav-link {
-    padding: 14px 16px;
+    padding: 16px;
     font-size: 1rem;
-    border-radius: var(--radius);
+    border-radius: 0;
     color: var(--text);
     border-bottom: 1px solid var(--border);
+    background: none;
   }
 
   .nav-link:last-child {
