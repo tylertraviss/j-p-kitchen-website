@@ -144,7 +144,6 @@ const state = {
   service: null,
   inspiredBy: [],      // photo alts (up to 3)
   inspiredBySrc: [],   // photo srcs (up to 3)
-  budget: null,
   timeline: null,
   contactMethod: null,
 };
@@ -163,7 +162,6 @@ function renderServices() {
   const prevSelected = state.service;
   grid.innerHTML = SERVICES.map(s => `
     <button class="service-card${prevSelected === s.id ? ' selected' : ''}" data-id="${s.id}" aria-pressed="${prevSelected === s.id}">
-      <span class="service-icon">${s.icon}</span>
       <span class="service-name">${getServiceName(s)}</span>
     </button>
   `).join('');
@@ -271,7 +269,7 @@ function validateStep(step) {
     if (!state.service) { showError('error-1', t('q_error1')); return false; }
   }
   if (step === 3) {
-    if (!state.budget || !state.timeline) {
+    if (!state.timeline) {
       showError('error-3', t('q_error3'));
       return false;
     }
@@ -367,7 +365,6 @@ function buildSummary() {
 
   const rows = [
     { label: lang === 'zh' ? '\u670d\u52a1\u7c7b\u578b' : 'Service',     value: service ? getServiceName(service) : state.service, plain: true },
-    { label: lang === 'zh' ? '\u9884\u7b97'              : 'Budget',      value: state.budget   || none, plain: true },
     { label: lang === 'zh' ? '\u8d77\u59cb\u65f6\u95f4'  : 'Timeline',    value: state.timeline || none, plain: true },
     { label: lang === 'zh' ? '\u59d3\u540d'              : 'Name',        value: name,  plain: true },
     { label: lang === 'zh' ? '\u7535\u5b50\u90ae\u4ef6'  : 'Email',       value: email, plain: true },
@@ -412,7 +409,6 @@ async function submitQuote() {
     contact_method : state.contactMethod || 'Not specified',
     service        : service ? service.name : state.service,
     inspired_by    : state.inspiredBy.length ? state.inspiredBy.join(', ') : 'None selected',
-    budget         : state.budget   || 'Not specified',
     timeline       : state.timeline || 'Not specified',
   };
 
@@ -436,7 +432,6 @@ async function submitQuote() {
 /* ── Init ── */
 function init() {
   renderServices();
-  bindChips('budget-group',   'budget');
   bindChips('timeline-group', 'timeline');
   bindChips('contact-group',  'contactMethod');
 

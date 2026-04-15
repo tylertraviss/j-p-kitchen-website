@@ -63,21 +63,8 @@
     <div class="q-step" id="step-3">
       <div class="q-step-inner">
         <p class="q-step-label" data-i18n="q_step3_label">Step 3 of 4</p>
-        <h1 class="q-heading" data-i18n="q_step3_heading">Investment &amp; Timeline</h1>
-        <p class="q-subheading" data-i18n="q_step3_sub">Help us understand your vision.</p>
-
-        <div class="q-section">
-          <p class="q-section-label" data-i18n="q_budget_label">What investment range are you considering?</p>
-          <div class="chip-group" id="budget-group">
-            <button class="chip" data-val="Under $10,000" data-i18n="q_budget_0">Under $10,000</button>
-            <button class="chip" data-val="$10,000 – $25,000" data-i18n="q_budget_1">$10,000 – $25,000</button>
-            <button class="chip" data-val="$25,000 – $50,000" data-i18n="q_budget_2">$25,000 – $50,000</button>
-            <button class="chip" data-val="$50,000 – $100,000" data-i18n="q_budget_3">$50,000 – $100,000</button>
-            <button class="chip" data-val="$100,000 – $250,000" data-i18n="q_budget_4">$100,000 – $250,000</button>
-            <button class="chip" data-val="$250,000+" data-i18n="q_budget_5">$250,000+</button>
-            <button class="chip" data-val="Prefer to discuss" data-i18n="q_budget_6">Prefer to discuss</button>
-          </div>
-        </div>
+        <h1 class="q-heading" data-i18n="q_step3_heading">Timeline</h1>
+        <p class="q-subheading" data-i18n="q_step3_sub">When are you hoping to get started?</p>
 
         <div class="q-section">
           <p class="q-section-label" data-i18n="q_timeline_label">When are you looking to start?</p>
@@ -90,7 +77,7 @@
           </div>
         </div>
 
-        <p class="q-error hidden" id="error-3" data-i18n="q_error3">Please select a budget and timeline to continue.</p>
+        <p class="q-error hidden" id="error-3" data-i18n="q_error3">Please select a timeline to continue.</p>
       </div>
     </div>
 
@@ -99,7 +86,7 @@
       <div class="q-step-inner">
         <p class="q-step-label" data-i18n="q_step4_label">Step 4 of 4</p>
         <h1 class="q-heading" data-i18n="q_step4_heading">How should we reach you?</h1>
-        <p class="q-subheading" data-i18n="q_step4_sub">Peter will personally follow up within 24 hours.</p>
+        <p class="q-subheading" data-i18n="q_step4_sub">Justin will personally follow up within 24 hours.</p>
 
         <div class="q-form">
           <div class="q-field">
@@ -135,7 +122,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
         </div>
         <h1 class="q-heading" data-i18n="q_confirm_heading">We'll be in touch soon.</h1>
-        <p class="q-subheading" data-i18n="q_confirm_sub">Peter will personally review your request and reach out within 24 hours. We look forward to working with you.</p>
+        <p class="q-subheading" data-i18n="q_confirm_sub">Justin will personally review your request and reach out within 24 hours. We look forward to working with you.</p>
         <div class="confirm-summary" id="confirm-summary"></div>
         <a href="index.html" class="btn btn-gold confirm-btn" data-i18n="q_confirm_btn">Back to Home</a>
       </div>
@@ -153,7 +140,7 @@
     EmailJS Setup Instructions
     ---------------------------------------------------------------
     1. Go to https://www.emailjs.com and create a free account
-    2. Add Email Service → connect Peter's Gmail
+    2. Add Email Service → connect Justin's Gmail
     3. Create an Email Template with these variables:
          Subject: New Quote Request — {{service}}
          Body: use the template below or customize it
@@ -172,7 +159,6 @@
     PROJECT
     Service:     {{service}}
     Inspired by: {{inspired_by}}
-    Budget:      {{budget}}
     Timeline:    {{timeline}}
     ─────────────────────────────────
   ============================================================ -->
