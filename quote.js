@@ -4,16 +4,6 @@
    quote.js — Request a Quote funnel logic
 ============================================================ */
 
-/* ── EmailJS placeholder IDs ──────────────────────────────
-   Replace these three values after setting up emailjs.com:
-   1. Sign in → Account → Public Key
-   2. Email Services → your service ID
-   3. Email Templates → your template ID
-──────────────────────────────────────────────────────────── */
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-
 /* ── Service definitions ── */
 const SERVICES = [
   { id: 'kitchen',    icon: '🍳', nameKey: 'q_svc_kitchen'    },
@@ -390,43 +380,40 @@ function buildSummary() {
   `;
 }
 
-/* ── EmailJS submit ── */
-async function submitQuote() {
+/* ── Mailto submit ── */
+function submitQuote() {
   if (!validateStep(4)) return;
 
-  const name     = document.getElementById('q-name').value.trim();
-  const email    = document.getElementById('q-email').value.trim();
-  const phone    = document.getElementById('q-phone').value.trim();
-  const service  = SERVICES.find(s => s.id === state.service);
+  const name    = document.getElementById('q-name').value.trim();
+  const email   = document.getElementById('q-email').value.trim();
+  const phone   = document.getElementById('q-phone').value.trim();
+  const service = SERVICES.find(s => s.id === state.service);
 
-  btnNext.classList.add('loading');
-  btnNext.disabled = true;
+  const subject = 'New Quote Request — ' + (service ? getServiceName(service) : state.service);
 
-  const params = {
-    name,
-    email,
-    phone,
-    contact_method : state.contactMethod || 'Not specified',
-    service        : service ? service.name : state.service,
-    inspired_by    : state.inspiredBy.length ? state.inspiredBy.join(', ') : 'None selected',
-    timeline       : state.timeline || 'Not specified',
-  };
+  const body = [
+    'Hi Justin, I am interested in enquiring more about this!',
+    '',
+    'CONTACT',
+    'Name:       ' + name,
+    'Email:      ' + email,
+    'Phone:      ' + phone,
+    'Reach via:  ' + (state.contactMethod || 'Not specified'),
+    '',
+    'PROJECT',
+    'Service:    ' + (service ? getServiceName(service) : state.service),
+    'Timeline:   ' + (state.timeline || 'Not specified'),
+    'Inspired by: ' + (state.inspiredBy.length ? state.inspiredBy.join(', ') : 'None selected'),
+  ].join('\n');
 
-  try {
-    if (EMAILJS_PUBLIC_KEY !== 'YOUR_PUBLIC_KEY') {
-      emailjs.init(EMAILJS_PUBLIC_KEY);
-      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
-    }
-    // Always show confirmation (graceful for unset IDs during dev)
-    buildSummary();
-    showStep('confirm', 'forward');
-    footer.classList.add('hidden');
-    progressBar.style.width = '100%';
-  } catch (err) {
-    btnNext.classList.remove('loading');
-    btnNext.disabled = false;
-    showError('error-4', t('q_error_send'));
-  }
+  window.location.href = 'mailto:justin_1128@hotmail.com'
+    + '?subject=' + encodeURIComponent(subject)
+    + '&body='    + encodeURIComponent(body);
+
+  buildSummary();
+  showStep('confirm', 'forward');
+  footer.classList.add('hidden');
+  progressBar.style.width = '100%';
 }
 
 /* ── Init ── */
