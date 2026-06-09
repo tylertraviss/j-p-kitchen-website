@@ -304,12 +304,24 @@ function showStep(newStep, direction) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+/* ── PostHog helper ── */
+function ph(event, props) {
+  if (typeof posthog !== 'undefined') posthog.capture(event, props || {});
+}
+
 /* ── Navigation ── */
 function goNext() {
   if (!validateStep(state.step)) return;
 
   if (state.step === 1) {
     renderPhotos();
+    ph('quote_step_completed', { step: 1, service: state.service });
+  }
+  if (state.step === 2) {
+    ph('quote_step_completed', { step: 2, photos_selected: state.inspiredBy.length });
+  }
+  if (state.step === 3) {
+    ph('quote_step_completed', { step: 3, timeline: state.timeline });
   }
 
   if (state.step === 4) {
@@ -325,6 +337,7 @@ function goNext() {
 
 function goBack() {
   if (state.step <= 1) return;
+  ph('quote_step_back', { from_step: state.step });
   state.step--;
   showStep(state.step, 'back');
   updateProgress(state.step);
@@ -406,6 +419,25 @@ function submitQuote() {
     'Inspired by: ' + (state.inspiredBy.length ? state.inspiredBy.join(', ') : 'None selected'),
   ].join('\n');
 
+  // Identify the user so their session recording is tied to their name/email
+  if (typeof posthog !== 'undefined') {
+    posthog.identify(email, {
+      name:           name,
+      email:          email,
+      phone:          phone,
+      service:        service ? getServiceName(service) : state.service,
+      timeline:       state.timeline || 'Not specified',
+      contact_method: state.contactMethod || 'Not specified',
+    });
+  }
+
+  ph('quote_submitted', {
+    service:         service ? getServiceName(service) : state.service,
+    timeline:        state.timeline || 'Not specified',
+    contact_method:  state.contactMethod || 'Not specified',
+    photos_selected: state.inspiredBy.length,
+  });
+
   window.location.href = 'mailto:justin_1128@hotmail.com'
     + '?subject=' + encodeURIComponent(subject)
     + '&body='    + encodeURIComponent(body);
@@ -429,4 +461,18 @@ function init() {
   updateFooterButtons();
 }
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', function () {
+  init();
+  ph('quote_funnel_started');
+
+  // Funnel abandonment — fire when user leaves mid-funnel
+  window.addEventListener('beforeunload', function () {
+    if (state.step > 1 && state.step <= 4) {
+      ph('quote_funnel_abandoned', {
+        abandoned_at_step: state.step,
+        service:           state.service || 'not selected',
+        timeline:          state.timeline || 'not selected',
+      });
+    }
+  });
+});
