@@ -419,10 +419,22 @@ function submitQuote() {
     'Inspired by: ' + (state.inspiredBy.length ? state.inspiredBy.join(', ') : 'None selected'),
   ].join('\n');
 
+  // Identify the user so their session recording is tied to their name/email
+  if (typeof posthog !== 'undefined') {
+    posthog.identify(email, {
+      name:           name,
+      email:          email,
+      phone:          phone,
+      service:        service ? getServiceName(service) : state.service,
+      timeline:       state.timeline || 'Not specified',
+      contact_method: state.contactMethod || 'Not specified',
+    });
+  }
+
   ph('quote_submitted', {
-    service:  service ? getServiceName(service) : state.service,
-    timeline: state.timeline || 'Not specified',
-    contact_method: state.contactMethod || 'Not specified',
+    service:         service ? getServiceName(service) : state.service,
+    timeline:        state.timeline || 'Not specified',
+    contact_method:  state.contactMethod || 'Not specified',
     photos_selected: state.inspiredBy.length,
   });
 
@@ -452,4 +464,15 @@ function init() {
 document.addEventListener('DOMContentLoaded', function () {
   init();
   ph('quote_funnel_started');
+
+  // Funnel abandonment — fire when user leaves mid-funnel
+  window.addEventListener('beforeunload', function () {
+    if (state.step > 1 && state.step <= 4) {
+      ph('quote_funnel_abandoned', {
+        abandoned_at_step: state.step,
+        service:           state.service || 'not selected',
+        timeline:          state.timeline || 'not selected',
+      });
+    }
+  });
 });
